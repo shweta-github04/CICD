@@ -17,7 +17,7 @@
       [
 	{
 	  "type": "docker-tag",
-	  "repository": "170780937101.dkr.ecr.us-east-1.amazonaws.com/solr",		
+	  "repository": "189895028386.dkr.ecr.us-east-1.amazonaws.com/solr",		
 	  "tag": "latest"
 	},	      
        {
@@ -25,7 +25,7 @@
 	"ecr_login": true,
 	"aws_access_key": "{{user `access_key`}}",
 	"aws_secret_key": "{{user `secret_key`}}",  
-        "login_server": "https://170780937101.dkr.ecr.us-east-1.amazonaws.com/solr"
+        "login_server": "https://189895028386.dkr.ecr.us-east-1.amazonaws.com/solr"
       }   
     ]
   ]
