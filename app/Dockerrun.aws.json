@@ -1,0 +1,8 @@
+{
+  "AWSEBDockerrunVersion": "1",
+  "Image": {
+    "Name": "478485449098.dkr.ecr.us-east-1.amazonaws.com/solr",
+    "Update": "true"
+  },
+  "Ports": [ { "ContainerPort" : 8983 } ]
+}
