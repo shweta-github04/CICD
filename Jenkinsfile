@@ -29,7 +29,7 @@ pipeline {
             stage('publish') {
                 steps {
 		    sh 'aws configure set region us-east-1'
-                    sh 'aws s3 cp app/Dockerrun.aws.json s3://solr-artifacts/solr/'
+                    sh 'aws s3 cp app/Dockerrun.aws.json s3://solr-artifacts/'
                 }
             }			
             stage('Deploy') {
@@ -38,5 +38,6 @@ pipeline {
 		    sh 'aws elasticbeanstalk update-environment --application-name $AWS_EB_APP_NAME --environment-name $AWS_EB_ENVIRONMENT --version-label $AWS_EB_APP_VERSION'
                 }
             }			
+
         }
     }
