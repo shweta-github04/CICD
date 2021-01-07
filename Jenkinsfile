@@ -3,11 +3,11 @@ pipeline {
         environment {
             AWS_ACCESS_KEY_ID = credentials('aws-access-secret-id')
             AWS_SECRET_ACCESS_KEY = credentials('aws-secret-access-key')
-			ARTIFACT_NAME = 'Dockerrun.aws.json'
+	    ARTIFACT_NAME = 'Dockerrun.aws.json'
             AWS_S3_BUCKET = 'solr-artifacts'
-			AWS_EB_APP_NAME = 'solr'
-			AWS_EB_ENVIRONMENT = 'Solr-env'
-			AWS_EB_APP_VERSION = "${BUILD_ID}"
+	    AWS_EB_APP_NAME = 'solr'
+	    AWS_EB_ENVIRONMENT = 'Solr-env'
+	    AWS_EB_APP_VERSION = "${BUILD_ID}"
             }
 
         stages {
