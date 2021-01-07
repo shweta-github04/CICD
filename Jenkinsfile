@@ -21,6 +21,12 @@ pipeline {
                     sh 'packer build packer/solr.json'
                 }
             }
+            stage('publish') {
+                steps {
+				    sh 'aws configure set region us-east-1'
+                    sh 'aws s3 cp app/Dockerrun.aws.json s3://solr-artifacts/solr/ '
+                }
+            }			
 
         }
     }
